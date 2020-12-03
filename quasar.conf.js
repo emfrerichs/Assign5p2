@@ -90,10 +90,17 @@ module.exports = function (/* ctx */) {
       //
       // components: [],
       // directives: [],
-
+      directives: [
+        'Ripple',
+        'ClosePopup'
+      ],
       // Quasar plugins
-      plugins: [],
-      components: ['QBanner',
+      plugins: [
+        'Notify',
+        'Dialog'
+      ],
+      components: [
+        'QBanner',
         'QTabPanels',
         'QTabPanel',
         'QSeparator'
@@ -114,8 +121,8 @@ module.exports = function (/* ctx */) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: `assign5`,
-        short_name: `assign5`,
+        name: `Quasar App`,
+        short_name: `Quasar App`,
         description: `A Quasar Framework app`,
         display: 'standalone',
         orientation: 'portrait',
@@ -181,7 +188,7 @@ module.exports = function (/* ctx */) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'assign5'
+        appId: 'maverick-todo'
       },
 
       // More info: https://quasar.dev/quasar-cli/developing-electron-apps/node-integration

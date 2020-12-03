@@ -1,4 +1,4 @@
-# assign5 (assign5)
+# Quasar App (maverick-todo)
 
 A Quasar Framework app
 

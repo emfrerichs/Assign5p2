@@ -23,7 +23,7 @@
           icon-right="account_circle"
           label="Logout"
           class="absolute-right" />
-
+       
       </q-toolbar>
     </q-header>
 
@@ -37,7 +37,6 @@
           :label="nav.label" />
       </q-tabs>
     </q-footer>
-
     <q-drawer
       v-model="leftDrawerOpen"
       :breakpoint="767"
@@ -62,7 +61,7 @@
             <q-item-label>{{ nav.label }}</q-item-label>
           </q-item-section>
         </q-item>
-
+        
       </q-list>
     </q-drawer>
 
@@ -73,48 +72,48 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
-import { openURL } from 'quasar'
+  import { mapState, mapActions } from 'vuex'
+  import { openURL } from 'quasar'
 
-export default {
-  name: 'MyLayout',
-  data () {
-    return {
-      leftDrawerOpen: this.$q.platform.is.desktop,
-      navs: [
-        {
-          label: 'Todo',
-          icon: 'list',
-          to: '/'
-        },
-        {
-          label: 'Settings',
-          icon: 'settings',
-          to: '/settings'
-        }
-      ]
+  export default {
+    name: 'MyLayout',
+    data () {
+      return {
+        leftDrawerOpen: this.$q.platform.is.desktop,
+        navs: [
+          {
+            label: 'Todo',
+            icon: 'list',
+            to: '/'
+          },
+          {
+            label: 'Settings',
+            icon: 'settings',
+            to: '/settings'
+          }
+        ]
+      }
+    },
+    computed: {
+      ...mapState('auth', ['loggedIn'])
+    },
+    methods: {
+       ...mapActions('auth', ['logoutUser']),
+      openURL
     }
-  },
-  computed: {
-    ...mapState('auth', ['loggedIn'])
-  },
-  methods: {
-    ...mapActions('auth', ['logoutUser']),
-    openURL
   }
-}
 </script>
 
 <style lang="scss">
-@media screen and (min-width: 768px) {
-  .q-footer {
-    display: none;
+  @media screen and (min-width: 768px) {
+    .q-footer {
+      display: none;
+    }
   }
-}
-
-.q-drawer {
-  .q-router-link--exact-active {
-    color: white !important;
+  
+  .q-drawer {
+    .q-router-link--exact-active {
+      color: white !important;
+    }
   }
-}
 </style>

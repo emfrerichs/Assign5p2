@@ -1,21 +1,20 @@
-
 const routes = [
   {
     path: '/',
     component: () => import('layouts/Layout.vue'),
     children: [
-      {
-        path: '',
-        component: () => import('pages/PageTodo.vue')
+      { 
+        path: '', 
+        component: () => import('pages/PageTodo.vue') 
       },
-      {
-        path: '/settings',
-        component: () => import('pages/PageSettings.vue')
+      { 
+        path: '/settings', 
+        component: () => import('pages/PageSettings.vue') 
       },
-      {
-        path: '/auth',
-        component: () => import('pages/PageAuth.vue')
-      }
+      { 
+        path: '/auth', 
+        component: () => import('pages/PageAuth.vue') 
+      } 
     ]
   }
 ]
@@ -29,4 +28,3 @@ if (process.env.MODE !== 'ssr') {
 }
 
 export default routes
-

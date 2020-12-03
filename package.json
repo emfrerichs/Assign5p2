@@ -1,9 +1,9 @@
 {
-  "name": "assign5",
+  "name": "maverick-todo",
   "version": "0.0.1",
   "description": "A Quasar Framework app",
-  "productName": "assign5",
-  "author": "emfrerichs@interpublic.com",
+  "productName": "Quasar App",
+  "author": "groyce@unomaha.edu>",
   "private": true,
   "scripts": {
     "test": "echo \"No test specified\" && exit 0"
@@ -11,8 +11,8 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "core-js": "^3.6.5",
-    "firebase": "^8.1.1",
-    "quasar": "^1.0.0"
+    "firebase": "^8.0.0",
+    "quasar": "^1.14.3"
   },
   "devDependencies": {
     "@quasar/app": "^2.0.0"
